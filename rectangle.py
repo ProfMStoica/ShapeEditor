@@ -6,6 +6,18 @@ class Rectangle:
         self._length = length
         self._width = width
 
+    def getLength(self):
+        return self._length
+    
+    def setLength(self, newLength):
+        self._length = newLength
+
+    def getWidth(self, newWidth):
+        return self._width
+    
+    def setWidth(self, newWidth):
+        self._width = newWidth
+
     def expandRectangle(self, lengthDelta, widthDelta):
         self._length += lengthDelta
         self._width += widthDelta

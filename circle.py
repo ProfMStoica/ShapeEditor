@@ -6,6 +6,12 @@ class Circle:
     def __init__(self, radius = 10):
         self._radius = radius
 
+    def getRadius(self):
+        return self._radius
+    
+    def setRadius(self, newRadius):
+        self._radius = newRadius
+        
     def expandCircle(self, radiusDelta):
         self._radius = self._radius + radiusDelta
 

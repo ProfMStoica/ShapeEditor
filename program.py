@@ -10,13 +10,13 @@ class Program:
         circle  = Circle()
 
         #print the radius of the default circle
-        print(f"The default circle has the radius: {circle._radius}")
+        print(f"The default circle has the radius: {circle.getRadius()}")
 
         #create a large circle
         largeCircle = Circle(1000)
 
         #print th eradius of the large circle
-        print(f"The large circle has the radius: {largeCircle._radius}")
+        print(f"The large circle has the radius: {largeCircle.getRadius()}")
 
         #contract the circle by 20 pixels
         largeCircle.contractCircle(20)
@@ -29,13 +29,13 @@ class Program:
         rect = Rectangle()        
 
         #TODO:print its length and width
-        print (f"This rectangle is {rect._length} by {rect._width}")
+        print (f"This rectangle is {rect.getLength()} by {rect.getWidth()}")
 
         #create a small rectangle that is 5x7
         smallRect = Rectangle(5, 7)
 
         #print the dimensions of the small rectangle
-        print(f"The small rectangle has the dimensions: {smallRect._length} x {smallRect._width}.")
+        print(f"The small rectangle has the dimensions: {smallRect.getLength()} x {smallRect.getWidth()}.")
 
         #increase the small rectangle by 10 and 13
         smallRect.expandRectangle(10, 13)
@@ -70,8 +70,21 @@ class Program:
         else:
             print("The circles have the same area")
 
+        #ask the user what radius they would like to set for the two circles
+        newRadiusOne = float(input("What is the new radius for circle one? "))
+        circleOne.setRadius((newRadiusOne))
+
+        newRadiusTwo = float(input("What is the new radius for circle two? "))
+        circleTwo.setRadius(newRadiusTwo)
+
+        #print the areas of the circles as adjusted
+        newAreaOne = circleOne.calculateArea()
+        print(f"The new area of the first circle with radius {circleOne.getRadius()} is {newAreaOne}")
+
         #TODO: add user interactivity to allow the user to create
         #rectangles of different dimensions and compare them
+
+        #TODO: add calls to change the dimensions of the rectangle object using mutator methods
 
         
     
