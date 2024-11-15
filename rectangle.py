@@ -12,7 +12,7 @@ class Rectangle:
     def setLength(self, newLength):
         self._length = newLength
 
-    def getWidth(self, newWidth):
+    def getWidth(self):
         return self._width
     
     def setWidth(self, newWidth):
